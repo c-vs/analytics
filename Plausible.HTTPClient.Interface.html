@@ -7,7 +7,7 @@
     <meta name="generator" content="ExDoc v0.28.5">
     <meta name="project" content="Plausible v0.0.1">
 
-    <title>Plausible.Billing.PaddleApi — Plausible v0.0.1</title>
+    <title>Plausible.HTTPClient.Interface — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
     <script src="dist/sidebar_items-b200817d5a.js"></script>
@@ -100,12 +100,12 @@ Plausible
 </button>
 
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/paddle_api.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L13" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Plausible.Billing.PaddleApi</span> 
+  <span translate="no">Plausible.HTTPClient.Interface</span> <small>behaviour</small>
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
@@ -121,14 +121,14 @@ Plausible
       Summary
     </h1>
 
-  <div class="summary-functions summary">
+  <div class="summary-types summary">
     <h2>
-      <a href="#functions">Functions</a>
+      <a href="#types">Types</a>
     </h2>
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#checkout_domain/0" translate="no">checkout_domain()</a>
+          <a href="#t:headers/0" translate="no">headers()</a>
 
         </div>
 
@@ -136,7 +136,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#get_invoices/1" translate="no">get_invoices(subscription)</a>
+          <a href="#t:params/0" translate="no">params()</a>
 
         </div>
 
@@ -144,7 +144,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#get_subscription/1" translate="no">get_subscription(paddle_subscription_id)</a>
+          <a href="#t:response/0" translate="no">response()</a>
 
         </div>
 
@@ -152,7 +152,22 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#update_subscription/2" translate="no">update_subscription(paddle_subscription_id, params)</a>
+          <a href="#t:url/0" translate="no">url()</a>
+
+        </div>
+
+      </div>
+
+  </div>
+
+  <div class="summary-callbacks summary">
+    <h2>
+      <a href="#callbacks">Callbacks</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#c:get/1" translate="no">get(url)</a>
 
         </div>
 
@@ -160,7 +175,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#update_subscription_preview/2" translate="no">update_subscription_preview(paddle_subscription_id, new_plan_id)</a>
+          <a href="#c:get/2" translate="no">get(url, headers)</a>
 
         </div>
 
@@ -168,7 +183,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#vendors_domain/0" translate="no">vendors_domain()</a>
+          <a href="#c:post/3" translate="no">post(url, headers, params)</a>
 
         </div>
 
@@ -179,47 +194,25 @@ Plausible
   </section>
 
 
-  <section id="functions" class="details-list">
+  <section id="types" class="details-list">
     <h1 class="section-heading">
-      <a class="hover-link" href="#functions">
+      <a class="hover-link" href="#types">
         <i class="ri-link-m" aria-hidden="true"></i>
         <span class="sr-only">Link to this section</span>
       </a>
-Functions
+Types
     </h1>
-    <div class="functions-list">
-<section class="detail" id="checkout_domain/0">
+    <div class="types-list">
+<section class="detail" id="t:headers/0">
 
   <div class="detail-header">
-    <a href="#checkout_domain/0" class="detail-link" title="Link to this function">
+    <a href="#t:headers/0" class="detail-link" title="Link to this type">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
+      <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature" translate="no">checkout_domain()</h1>
+    <h1 class="signature" translate="no">headers()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/paddle_api.ex#L130" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="get_invoices/1">
-
-  <div class="detail-header">
-    <a href="#get_invoices/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">get_invoices(subscription)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/paddle_api.ex#L96" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L15" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -231,24 +224,23 @@ Functions
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@spec</span> get_invoices(Plausible.Billing.Subscription.t()) ::
-  {:ok, <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">list</a>()} | {:error, :request_failed} | {:error, :no_invoices}</pre>
+          <pre translate="no"><span class="attribute">@type</span> headers() :: <a href="https://hexdocs.pm/finch/0.12.0/Finch.Request.html#t:headers/0">Finch.Request.headers</a>()</pre>
 
       </div>
 
 
   </section>
 </section>
-<section class="detail" id="get_subscription/1">
+<section class="detail" id="t:params/0">
 
   <div class="detail-header">
-    <a href="#get_subscription/1" class="detail-link" title="Link to this function">
+    <a href="#t:params/0" class="detail-link" title="Link to this type">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
+      <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature" translate="no">get_subscription(paddle_subscription_id)</h1>
+    <h1 class="signature" translate="no">params()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/paddle_api.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L16" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -257,20 +249,26 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> params() :: <a href="https://hexdocs.pm/finch/0.12.0/Finch.Request.html#t:body/0">Finch.Request.body</a>() | <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()</pre>
+
+      </div>
 
 
   </section>
 </section>
-<section class="detail" id="update_subscription/2">
+<section class="detail" id="t:response/0">
 
   <div class="detail-header">
-    <a href="#update_subscription/2" class="detail-link" title="Link to this function">
+    <a href="#t:response/0" class="detail-link" title="Link to this type">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
+      <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature" translate="no">update_subscription(paddle_subscription_id, params)</h1>
+    <h1 class="signature" translate="no">response()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/paddle_api.ex#L38" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L17" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -279,20 +277,29 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> response() ::
+  {:ok, <a href="https://hexdocs.pm/finch/0.12.0/Finch.Response.html#t:t/0">Finch.Response.t</a>()}
+  | {:error,
+     <a href="https://hexdocs.pm/mint/1.4.2/Mint.Types.html#t:error/0">Mint.Types.error</a>() | <a href="https://hexdocs.pm/finch/0.12.0/Finch.Error.html#t:t/0">Finch.Error.t</a>() | <a href="Plausible.HTTPClient.Non200Error.html#t:t/0">Plausible.HTTPClient.Non200Error.t</a>()}</pre>
+
+      </div>
 
 
   </section>
 </section>
-<section class="detail" id="update_subscription_preview/2">
+<section class="detail" id="t:url/0">
 
   <div class="detail-header">
-    <a href="#update_subscription_preview/2" class="detail-link" title="Link to this function">
+    <a href="#t:url/0" class="detail-link" title="Link to this type">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
+      <span class="sr-only">Link to this type</span>
     </a>
-    <h1 class="signature" translate="no">update_subscription_preview(paddle_subscription_id, new_plan_id)</h1>
+    <h1 class="signature" translate="no">url()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/paddle_api.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L14" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -301,20 +308,39 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> url() :: <a href="https://hexdocs.pm/finch/0.12.0/Finch.Request.html#t:url/0">Finch.Request.url</a>()</pre>
+
+      </div>
 
 
   </section>
 </section>
-<section class="detail" id="vendors_domain/0">
+
+    </div>
+  </section>
+
+  <section id="callbacks" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#callbacks">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Callbacks
+    </h1>
+    <div class="callbacks-list">
+<section class="detail" id="c:get/1">
 
   <div class="detail-header">
-    <a href="#vendors_domain/0" class="detail-link" title="Link to this function">
+    <a href="#c:get/1" class="detail-link" title="Link to this callback">
       <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
+      <span class="sr-only">Link to this callback</span>
     </a>
-    <h1 class="signature" translate="no">vendors_domain()</h1>
+    <h1 class="signature" translate="no">get(url)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/paddle_api.ex#L137" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L22" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -323,6 +349,68 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@callback</span> get(<a href="#t:url/0">url</a>()) :: <a href="#t:response/0">response</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="c:get/2">
+
+  <div class="detail-header">
+    <a href="#c:get/2" class="detail-link" title="Link to this callback">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this callback</span>
+    </a>
+    <h1 class="signature" translate="no">get(url, headers)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L21" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@callback</span> get(<a href="#t:url/0">url</a>(), <a href="#t:headers/0">headers</a>()) :: <a href="#t:response/0">response</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="c:post/3">
+
+  <div class="detail-header">
+    <a href="#c:post/3" class="detail-link" title="Link to this callback">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this callback</span>
+    </a>
+    <h1 class="signature" translate="no">post(url, headers, params)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L23" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@callback</span> post(<a href="#t:url/0">url</a>(), <a href="#t:headers/0">headers</a>(), <a href="#t:params/0">params</a>()) :: <a href="#t:response/0">response</a>()</pre>
+
+      </div>
 
 
   </section>

@@ -10,7 +10,7 @@
     <title>Plausible.Google.Api — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-96a6071e96.js"></script>
+    <script src="dist/sidebar_items-b200817d5a.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -134,6 +134,14 @@ Plausible
 
       </div>
 
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:import_auth/0" translate="no">import_auth()</a>
+
+        </div>
+
+      </div>
+
   </div>
 
   <div class="summary-functions summary">
@@ -185,7 +193,7 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#import_analytics/4" translate="no">import_analytics(site, date_range, view_id, access_token)</a>
+          <a href="#import_analytics/4" translate="no">import_analytics(site, date_range, view_id, auth)</a>
 
         </div>
 
@@ -253,6 +261,36 @@ Types
 
   </section>
 </section>
+<section class="detail" id="t:import_auth/0">
+
+  <div class="detail-header">
+    <a href="#t:import_auth/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">import_auth()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/api.ex#L111" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> import_auth() ::
+  {access_token :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), refresh_token :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(),
+   expires_at :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()}</pre>
+
+      </div>
+
+
+  </section>
+</section>
 
     </div>
   </section>
@@ -299,7 +337,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">fetch_and_persist(site, report_request, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/api.ex#L156" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/api.ex#L181" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -376,7 +414,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_view(access_token, lookup_id)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/api.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/api.ex#L95" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -403,9 +441,9 @@ Functions
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">import_analytics(site, date_range, view_id, access_token)</h1>
+    <h1 class="signature" translate="no">import_analytics(site, date_range, view_id, auth)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/api.ex#L128" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/api.ex#L139" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -417,7 +455,7 @@ Functions
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@spec</span> import_analytics(<a href="Plausible.Site.html#t:t/0">Plausible.Site.t</a>(), <a href="https://hexdocs.pm/elixir/Date.Range.html#t:t/0">Date.Range.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) ::
+          <pre translate="no"><span class="attribute">@spec</span> import_analytics(<a href="Plausible.Site.html#t:t/0">Plausible.Site.t</a>(), <a href="https://hexdocs.pm/elixir/Date.Range.html#t:t/0">Date.Range.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:import_auth/0">import_auth</a>()) ::
   :ok | {:error, <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()}</pre>
 
       </div>
@@ -460,7 +498,7 @@ request. The batches are then buffered to Clickhouse by the
     </a>
     <h1 class="signature" translate="no">list_views(access_token)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/api.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/api.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

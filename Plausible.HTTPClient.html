@@ -10,7 +10,7 @@
     <title>Plausible.HTTPClient — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-96a6071e96.js"></script>
+    <script src="dist/sidebar_items-b200817d5a.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -100,7 +100,7 @@ Plausible
 </button>
 
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L26" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
@@ -113,7 +113,7 @@ Plausible
 
   <section id="moduledoc">
 <p>HTTP Client built on top of Finch.</p><p>By default, request parameters are json-encoded.</p><p>If a raw binary value is supplied, no encoding is performed.
-If x-www-form-urlencoded content-type is set in headers, 
+If x-www-form-urlencoded content-type is set in headers,
 URL encoding is invoked.</p>
   </section>
 
@@ -126,45 +126,6 @@ URL encoding is invoked.</p>
       </a>
       Summary
     </h1>
-
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:headers/0" translate="no">headers()</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:params/0" translate="no">params()</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:response/0" translate="no">response()</a>
-
-        </div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#t:url/0" translate="no">url()</a>
-
-        </div>
-
-      </div>
-
-  </div>
 
   <div class="summary-functions summary">
     <h2>
@@ -183,6 +144,14 @@ URL encoding is invoked.</p>
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#impl/0" translate="no">impl()</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#post/3" translate="no">post(url, headers \\ [], params \\ nil)</a>
 
         </div>
@@ -195,134 +164,6 @@ URL encoding is invoked.</p>
 
   </section>
 
-
-  <section id="types" class="details-list">
-    <h1 class="section-heading">
-      <a class="hover-link" href="#types">
-        <i class="ri-link-m" aria-hidden="true"></i>
-        <span class="sr-only">Link to this section</span>
-      </a>
-Types
-    </h1>
-    <div class="types-list">
-<section class="detail" id="t:headers/0">
-
-  <div class="detail-header">
-    <a href="#t:headers/0" class="detail-link" title="Link to this type">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <h1 class="signature" translate="no">headers()</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L25" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@type</span> headers() :: <a href="https://hexdocs.pm/finch/0.12.0/Finch.Request.html#t:headers/0">Finch.Request.headers</a>()</pre>
-
-      </div>
-
-
-  </section>
-</section>
-<section class="detail" id="t:params/0">
-
-  <div class="detail-header">
-    <a href="#t:params/0" class="detail-link" title="Link to this type">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <h1 class="signature" translate="no">params()</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L26" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@type</span> params() :: <a href="https://hexdocs.pm/finch/0.12.0/Finch.Request.html#t:body/0">Finch.Request.body</a>() | <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()</pre>
-
-      </div>
-
-
-  </section>
-</section>
-<section class="detail" id="t:response/0">
-
-  <div class="detail-header">
-    <a href="#t:response/0" class="detail-link" title="Link to this type">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <h1 class="signature" translate="no">response()</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L27" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@type</span> response() ::
-  {:ok, <a href="https://hexdocs.pm/finch/0.12.0/Finch.Response.html#t:t/0">Finch.Response.t</a>()}
-  | {:error,
-     <a href="https://hexdocs.pm/mint/1.4.2/Mint.Types.html#t:error/0">Mint.Types.error</a>() | <a href="https://hexdocs.pm/finch/0.12.0/Finch.Error.html#t:t/0">Finch.Error.t</a>() | <a href="Plausible.HTTPClient.Non200Error.html#t:t/0">Plausible.HTTPClient.Non200Error.t</a>()}</pre>
-
-      </div>
-
-
-  </section>
-</section>
-<section class="detail" id="t:url/0">
-
-  <div class="detail-header">
-    <a href="#t:url/0" class="detail-link" title="Link to this type">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <h1 class="signature" translate="no">url()</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L24" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@type</span> url() :: <a href="https://hexdocs.pm/finch/0.12.0/Finch.Request.html#t:url/0">Finch.Request.url</a>()</pre>
-
-      </div>
-
-
-  </section>
-</section>
-
-    </div>
-  </section>
 
   <section id="functions" class="details-list">
     <h1 class="section-heading">
@@ -344,7 +185,29 @@ Functions
     </a>
     <h1 class="signature" translate="no">get(url, headers \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L51" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Make a GET request</p>
+  </section>
+</section>
+<section class="detail" id="impl/0">
+
+  <div class="detail-header">
+    <a href="#impl/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">impl()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -356,11 +219,11 @@ Functions
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@spec</span> get(<a href="#t:url/0">url</a>(), <a href="#t:headers/0">headers</a>()) :: <a href="#t:response/0">response</a>()</pre>
+          <pre translate="no"><span class="attribute">@spec</span> impl() :: Plausible.HTTPClient</pre>
 
       </div>
 
-<p>Make a GET request</p>
+
   </section>
 </section>
 <section class="detail" id="post/3">
@@ -376,7 +239,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">post(url, headers \\ [], params \\ nil)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/http_client.ex#L43" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -385,12 +248,6 @@ Functions
   </div>
 
   <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@spec</span> post(<a href="#t:url/0">url</a>(), <a href="#t:headers/0">headers</a>(), <a href="#t:params/0">params</a>()) :: <a href="#t:response/0">response</a>()</pre>
-
-      </div>
 
 <p>Make a POST request</p>
   </section>

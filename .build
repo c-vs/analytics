@@ -5,6 +5,7 @@ Mix.Tasks.CreateFreeSubscription.html
 Mix.Tasks.DownloadCountryDatabase.html
 Mix.Tasks.GenerateReferrerFavicons.html
 Mix.Tasks.PullSandboxSubscription.html
+Mix.Tasks.SendPageview.html
 ObanErrorReporter.html
 Plausible.Auth.ApiKey.html
 Plausible.Auth.ApiKeyAdmin.html
@@ -33,6 +34,7 @@ Plausible.Google.Api.html
 Plausible.Google.Buffer.html
 Plausible.Google.HTTP.html
 Plausible.Google.ReportRequest.html
+Plausible.HTTPClient.Interface.html
 Plausible.HTTPClient.Non200Error.html
 Plausible.HTTPClient.html
 Plausible.Imported.html
@@ -65,6 +67,7 @@ Plausible.Stats.Breakdown.html
 Plausible.Stats.Clickhouse.html
 Plausible.Stats.Compare.html
 Plausible.Stats.CurrentVisitors.html
+Plausible.Stats.FilterParser.html
 Plausible.Stats.FilterSuggestions.html
 Plausible.Stats.Filters.html
 Plausible.Stats.Fragments.html
@@ -150,8 +153,8 @@ dist/html/fonts/remixicon.svg
 dist/html/fonts/remixicon.ttf
 dist/html/fonts/remixicon.woff
 dist/html/fonts/remixicon.woff2
-dist/search_items-b0577b4fa4.js
-dist/sidebar_items-96a6071e96.js
+dist/search_items-d771e356c3.js
+dist/sidebar_items-b200817d5a.js
 index.html
 readme.html
 search.html

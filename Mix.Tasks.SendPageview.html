@@ -7,7 +7,7 @@
     <meta name="generator" content="ExDoc v0.28.5">
     <meta name="project" content="Plausible v0.0.1">
 
-    <title>Plausible.Workers.SendCheckStatsEmails — Plausible v0.0.1</title>
+    <title>mix send_pageview — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
     <script src="dist/sidebar_items-b200817d5a.js"></script>
@@ -18,7 +18,7 @@
 
 
   </head>
-  <body data-type="modules">
+  <body data-type="tasks">
     <script>
 
       try {
@@ -100,18 +100,86 @@ Plausible
 </button>
 
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/workers/send_check_stats_emails.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/mix/tasks/send_pageview.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Plausible.Workers.SendCheckStatsEmails</span> 
+  <span translate="no">mix send_pageview</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
 
+  <section id="moduledoc">
+<p>It's often necessary to generate fake events for development and testing purposes. This Mix Task provides a quick and easy
+way to generate a pageview or custom event, either in your development environment or a remote Plausible instance.</p><p>See Mix.Tasks.SendPageview.usage/1 for more detailed documentation.</p>
+  </section>
 
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+      Summary
+    </h1>
+
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#run/1" translate="no">run(opts)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/mix/Mix.Task.html#c:run/1"><code class="inline">Mix.Task.run/1</code></a>.</p></div>
+
+      </div>
+
+  </div>
+
+  </section>
+
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Functions
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="run/1">
+
+  <div class="detail-header">
+    <a href="#run/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">run(opts)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/mix/tasks/send_pageview.ex#L25" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Callback implementation for <a href="https://hexdocs.pm/mix/Mix.Task.html#c:run/1"><code class="inline">Mix.Task.run/1</code></a>.</p>
+  </section>
+</section>
+
+    </div>
+  </section>
 
       <footer class="footer">
 

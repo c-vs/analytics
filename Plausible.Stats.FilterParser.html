@@ -7,7 +7,7 @@
     <meta name="generator" content="ExDoc v0.28.5">
     <meta name="project" content="Plausible v0.0.1">
 
-    <title>Plausible.Sentry.Client — Plausible v0.0.1</title>
+    <title>Plausible.Stats.FilterParser — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
     <script src="dist/sidebar_items-b200817d5a.js"></script>
@@ -100,16 +100,20 @@ Plausible
 </button>
 
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/sentry/client.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/filter_parser.ex#L1" title="View Source" class="view-source" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Plausible.Sentry.Client</span> 
+  <span translate="no">Plausible.Stats.FilterParser</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
+
+  <section id="moduledoc">
+<p>A module for parsing filters used in stat queries.</p>
+  </section>
 
 
   <section id="summary" class="details-list">
@@ -128,23 +132,11 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
-          <a href="#child_spec/0" translate="no">child_spec()</a>
+          <a href="#parse_filters/1" translate="no">parse_filters(filters)</a>
 
         </div>
 
-          <div class="summary-synopsis"><p>The Sentry.HTTPClient behaviour requires a child spec to be supplied.
-In this case we don't want Sentry to manage our Finch instances, hence it's fed
-with a dummy module for the sake of the contract.</p></div>
-
-      </div>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#post/3" translate="no">post(url, headers, body)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/sentry/8.0.6/Sentry.HTTPClient.html#c:post/3"><code class="inline">Sentry.HTTPClient.post/3</code></a>.</p></div>
+          <div class="summary-synopsis"><p>Parses different filter formats.</p></div>
 
       </div>
 
@@ -162,16 +154,16 @@ with a dummy module for the sake of the contract.</p></div>
 Functions
     </h1>
     <div class="functions-list">
-<section class="detail" id="child_spec/0">
+<section class="detail" id="parse_filters/1">
 
   <div class="detail-header">
-    <a href="#child_spec/0" class="detail-link" title="Link to this function">
+    <a href="#parse_filters/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">child_spec()</h1>
+    <h1 class="signature" translate="no">parse_filters(filters)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/sentry/client.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/filter_parser.ex#L28" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -181,31 +173,20 @@ Functions
 
   <section class="docstring">
 
-<p>The Sentry.HTTPClient behaviour requires a child spec to be supplied.
-In this case we don't want Sentry to manage our Finch instances, hence it's fed
-with a dummy module for the sake of the contract.</p><p>XXX: Submit a Sentry PR making the child spec callback optional.</p>
-  </section>
-</section>
-<section class="detail" id="post/3">
+<p>Parses different filter formats.</p><p>Depending on the format and type of the <code class="inline">filters</code> argument, returns:</p><ul><li>a decoded map, when <code class="inline">filters</code> is encoded JSON</li><li>a parsed filter map, when <code class="inline">filters</code> is a filter expression string</li><li>the same map, when <code class="inline">filters</code> is a map</li></ul><p>Returns an empty map when argument type is unexpected (e.g. <code class="inline">nil</code>).</p><h3 id="parse_filters/1-examples" class="section-heading">
+  <a href="#parse_filters/1-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">examples</p>
+  </a>
+  Examples:
+</h3>
+<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">FilterParser</span><span class="o">.</span><span class="n">parse_filters</span><span class="p" data-group-id="2241215758-1">(</span><span class="s">&quot;{</span><span class="se">\&quot;</span><span class="s">page</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">/blog/**</span><span class="se">\&quot;</span><span class="s">}&quot;</span><span class="p" data-group-id="2241215758-1">)</span><span class="w">
+</span><span class="p" data-group-id="2241215758-2">%{</span><span class="s">&quot;page&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;/blog/**&quot;</span><span class="p" data-group-id="2241215758-2">}</span><span class="w">
 
-  <div class="detail-header">
-    <a href="#post/3" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">post(url, headers, body)</h1>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">FilterParser</span><span class="o">.</span><span class="n">parse_filters</span><span class="p" data-group-id="2241215758-3">(</span><span class="s">&quot;visit:browser!=Chrome&quot;</span><span class="p" data-group-id="2241215758-3">)</span><span class="w">
+</span><span class="p" data-group-id="2241215758-4">%{</span><span class="s">&quot;visit:browser&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="2241215758-5">{</span><span class="ss">:is_not</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Chrome&quot;</span><span class="p" data-group-id="2241215758-5">}</span><span class="p" data-group-id="2241215758-4">}</span><span class="w">
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/sentry/client.ex#L19" class="view-source" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Callback implementation for <a href="https://hexdocs.pm/sentry/8.0.6/Sentry.HTTPClient.html#c:post/3"><code class="inline">Sentry.HTTPClient.post/3</code></a>.</p>
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">FilterParser</span><span class="o">.</span><span class="n">parse_filters</span><span class="p" data-group-id="2241215758-6">(</span><span class="no">nil</span><span class="p" data-group-id="2241215758-6">)</span><span class="w">
+</span><span class="p" data-group-id="2241215758-7">%{</span><span class="p" data-group-id="2241215758-7">}</span></code></pre>
   </section>
 </section>
 

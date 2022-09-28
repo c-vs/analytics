@@ -10,7 +10,7 @@
     <title>Contributing — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-96a6071e96.js"></script>
+    <script src="dist/sidebar_items-b200817d5a.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -126,7 +126,7 @@ Plausible
   </a>
   Creating an account
 </h3>
-<ol><li>Navigate to <code class="inline">http://localhost:8000/register</code> and fill in the form.</li><li>Fill in the rest of the forms and for the domain use <code class="inline">dummy.site</code></li><li>Skip the JS snippet and click start collecting data.</li><li>Run <code class="inline">make dummy_event</code> from the terminal to generate a fake pageview event for the dummy site.</li><li>You should now be all set!</li></ol><h3 id="stopping-docker-containers" class="section-heading">
+<ol><li>Navigate to <code class="inline">http://localhost:8000/register</code> and fill in the form.</li><li>Fill in the rest of the forms and for the domain use <code class="inline">dummy.site</code></li><li>Skip the JS snippet and click start collecting data.</li><li>Run <code class="inline">mix send_pageview</code> from the terminal to generate a fake pageview event for the dummy site.</li><li>You should now be all set!</li></ol><h3 id="stopping-docker-containers" class="section-heading">
   <a href="#stopping-docker-containers" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
   <p class="sr-only">stopping-docker-containers</p>
   </a>
