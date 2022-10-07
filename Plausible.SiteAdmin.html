@@ -10,7 +10,7 @@
     <title>Plausible.SiteAdmin — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-b200817d5a.js"></script>
+    <script src="dist/sidebar_items-0c15b64500.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -128,6 +128,14 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#create_changeset/2" translate="no">create_changeset(schema, attrs)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#custom_index_query/3" translate="no">custom_index_query(conn, schema, query)</a>
 
         </div>
@@ -176,6 +184,14 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#ordering/1" translate="no">ordering(schema)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#search_fields/1" translate="no">search_fields(schema)</a>
 
         </div>
@@ -198,6 +214,14 @@ Plausible
 
       </div>
 
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#update_changeset/2" translate="no">update_changeset(schema, attrs)</a>
+
+        </div>
+
+      </div>
+
   </div>
 
   </section>
@@ -212,6 +236,28 @@ Plausible
 Functions
     </h1>
     <div class="functions-list">
+<section class="detail" id="create_changeset/2">
+
+  <div class="detail-header">
+    <a href="#create_changeset/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">create_changeset(schema, attrs)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L135" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
 <section class="detail" id="custom_index_query/3">
 
   <div class="detail-header">
@@ -221,7 +267,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">custom_index_query(conn, schema, query)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L16" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -243,7 +289,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">event_transfer_query(from_domain, to_domain)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L95" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L104" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -265,7 +311,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">form_fields(_)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L20" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -287,7 +333,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">get_struct_fields(module)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L114" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -309,7 +355,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">index(_)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -331,7 +377,29 @@ Functions
     </a>
     <h1 class="signature" translate="no">list_actions(conn)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L40" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="ordering/1">
+
+  <div class="detail-header">
+    <a href="#ordering/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">ordering(schema)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L5" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -353,7 +421,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">search_fields(schema)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L9" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -375,7 +443,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">session_transfer_query(from_domain, to_domain)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L94" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -397,7 +465,29 @@ Functions
     </a>
     <h1 class="signature" translate="no">transfer_data(arg1, params)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L70" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="update_changeset/2">
+
+  <div class="detail-header">
+    <a href="#update_changeset/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">update_changeset(schema, attrs)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/admin.ex#L136" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

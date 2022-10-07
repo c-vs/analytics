@@ -10,7 +10,7 @@
     <title>Plausible.Site — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-b200817d5a.js"></script>
+    <script src="dist/sidebar_items-0c15b64500.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -151,6 +151,14 @@ Plausible
 
       <div class="summary-row">
         <div class="summary-signature">
+          <a href="#crm_changeset/2" translate="no">crm_changeset(site, attrs)</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
           <a href="#import_failure/1" translate="no">import_failure(site)</a>
 
         </div>
@@ -162,6 +170,18 @@ Plausible
           <a href="#import_success/1" translate="no">import_success(site)</a>
 
         </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#local_start_date/1" translate="no">local_start_date(site)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p>Returns the date of the first recorded stat in the timezone configured by the user.
+This function does 2 transformations:
+  UTC %NaiveDateTime{} -&gt; Local %DateTime{} -&gt; Local %Date</p></div>
 
       </div>
 
@@ -311,6 +331,28 @@ Functions
 
   </section>
 </section>
+<section class="detail" id="crm_changeset/2">
+
+  <div class="detail-header">
+    <a href="#crm_changeset/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">crm_changeset(site, attrs)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L57" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
 <section class="detail" id="import_failure/1">
 
   <div class="detail-header">
@@ -320,7 +362,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">import_failure(site)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L86" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L93" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -342,7 +384,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">import_success(site)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L86" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -355,6 +397,45 @@ Functions
 
   </section>
 </section>
+<section class="detail" id="local_start_date/1">
+
+  <div class="detail-header">
+    <a href="#local_start_date/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">local_start_date(site)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L132" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the date of the first recorded stat in the timezone configured by the user.
+This function does 2 transformations:
+  UTC %NaiveDateTime{} -&gt; Local %DateTime{} -&gt; Local %Date</p><h2 id="local_start_date/1-examples" class="section-heading">
+  <a href="#local_start_date/1-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
+  <p class="sr-only">examples</p>
+  </a>
+  Examples
+</h2>
+<p>  iex&gt; Plausible.Site.local_start_date(%Plausible.Site{stats_start_date: nil})
+  nil</p><p>  iex&gt; utc_start = ~N[2022-09-28 00:00:00]
+  iex&gt; tz = &quot;Europe/Helsinki&quot;
+  iex&gt; site = %Plausible.Site{stats_start_date: utc_start, timezone: tz}
+  iex&gt; Plausible.Site.local_start_date(site)
+  ~D[2022-09-28]</p><p>  iex&gt; utc_start = ~N[2022-09-28 00:00:00]
+  iex&gt; tz = &quot;America/Los_Angeles&quot;
+  iex&gt; site = %Plausible.Site{stats_start_date: utc_start, timezone: tz}
+  iex&gt; Plausible.Site.local_start_date(site)
+  ~D[2022-09-27]</p>
+  </section>
+</section>
 <section class="detail" id="make_private/1">
 
   <div class="detail-header">
@@ -364,7 +445,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">make_private(site)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L67" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -386,7 +467,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">make_public(site)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -408,7 +489,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">remove_imported_data(site)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L99" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L106" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -430,7 +511,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_imported_source(site, imported_source)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L97" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -452,7 +533,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">set_stats_start_date(site, val)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L64" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L71" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -476,7 +557,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">start_import(site, start_date, end_date, imported_source, status \\ &quot;importing&quot;)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/schema.ex#L75" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

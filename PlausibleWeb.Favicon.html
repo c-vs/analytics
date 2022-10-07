@@ -10,7 +10,7 @@
     <title>PlausibleWeb.Favicon — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
 
-    <script src="dist/sidebar_items-b200817d5a.js"></script>
+    <script src="dist/sidebar_items-0c15b64500.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -112,18 +112,18 @@ Plausible
 
 
   <section id="moduledoc">
-<p>  A Plug that fetches favicon images from DuckDuckGo and returns them
-  to the Plausible frontend.</p><p>  The proxying is there so we can reduce the number of third-party domains that
-  the browser clients need to connect to. Our goal is to have 0 third-party domain
-  connections on the website for privacy reasons.</p><p>  This module also maps between categorized sources and their respective URLs for favicons.
-  What does that mean exactly? During ingestion we use <a href="PlausibleWeb.RefInspector.html#parse/1"><code class="inline">PlausibleWeb.RefInspector.parse/1</code></a> to
-  categorize our referrer sources like so:</p><p>  google.com -&gt; Google
-  google.co.uk -&gt; Google
-  google.com.au -&gt; Google</p><p>  So when we show Google as a source in the dashboard, the request to this plug will come as:
-  <a href="https://plausible/io/favicon/sources/Google">https://plausible/io/favicon/sources/Google</a></p><p>  Now, when we want to show a favicon for Google, we need to convert Google -&gt; google.com or
-  some other hostname owned by Google:
-  <a href="https://icons.duckduckgo.com/ip3/google.com.ico">https://icons.duckduckgo.com/ip3/google.com.ico</a></p><p>  The mapping from source category -&gt; source hostname is stored in &quot;priv/referer_favicon_domains.json&quot; and
-  managed by <a href="Mix.Tasks.GenerateReferrerFavicons.html#run/1"><code class="inline">Mix.Tasks.GenerateReferrerFavicons.run/1</code></a></p>
+<p>A Plug that fetches favicon images from DuckDuckGo and returns them
+to the Plausible frontend.</p><p>The proxying is there so we can reduce the number of third-party domains that
+the browser clients need to connect to. Our goal is to have 0 third-party domain
+connections on the website for privacy reasons.</p><p>This module also maps between categorized sources and their respective URLs for favicons.
+What does that mean exactly? During ingestion we use <a href="PlausibleWeb.RefInspector.html#parse/1"><code class="inline">PlausibleWeb.RefInspector.parse/1</code></a> to
+categorize our referrer sources like so:</p><p>google.com -&gt; Google
+google.co.uk -&gt; Google
+google.com.au -&gt; Google</p><p>So when we show Google as a source in the dashboard, the request to this plug will come as:
+<a href="https://plausible/io/favicon/sources/Google">https://plausible/io/favicon/sources/Google</a></p><p>Now, when we want to show a favicon for Google, we need to convert Google -&gt; google.com or
+some other hostname owned by Google:
+<a href="https://icons.duckduckgo.com/ip3/google.com.ico">https://icons.duckduckgo.com/ip3/google.com.ico</a></p><p>The mapping from source category -&gt; source hostname is stored in &quot;priv/referer_favicon_domains.json&quot; and
+managed by <a href="Mix.Tasks.GenerateReferrerFavicons.html#run/1"><code class="inline">Mix.Tasks.GenerateReferrerFavicons.run/1</code></a></p>
   </section>
 
 
@@ -147,8 +147,8 @@ Plausible
 
         </div>
 
-          <div class="summary-synopsis"><p>  Proxies HTTP request to DuckDuckGo favicon service. Swallows hop-by-hop HTTP headers that
-  should not be forwarded as defined in RFC 2616 (<a href="https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1">https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1</a>)</p></div>
+          <div class="summary-synopsis"><p>Proxies HTTP request to DuckDuckGo favicon service. Swallows hop-by-hop HTTP headers that
+should not be forwarded as defined in RFC 2616 (<a href="https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1">https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1</a>)</p></div>
 
       </div>
 
@@ -183,7 +183,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">call(conn, list)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/favicon.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/favicon.ex#L61" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -193,8 +193,12 @@ Functions
 
   <section class="docstring">
 
-<p>  Proxies HTTP request to DuckDuckGo favicon service. Swallows hop-by-hop HTTP headers that
-  should not be forwarded as defined in RFC 2616 (<a href="https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1">https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1</a>)</p>
+<p>Proxies HTTP request to DuckDuckGo favicon service. Swallows hop-by-hop HTTP headers that
+should not be forwarded as defined in RFC 2616 (<a href="https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1">https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1</a>)</p><p>Cases where we show a placeholder icon instead:</p><ul><li>In case of network error to DuckDuckGo</li><li>In case of non-2xx status code from DuckDuckGo</li><li>In case of broken image response body from DuckDuckGo</li></ul><p>I'm not sure why DDG sometimes returns a broken PNG image in their response but we filter that out.
+When the icon request fails, we show a placeholder favicon instead. The placeholder is an emoji
+from <a href="https://favicon.io/emoji-favicons/">https://favicon.io/emoji-favicons/</a></p><p>DuckDuckGo favicon service has some issues with <a href="https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/">svg favicons</a>.
+For some reason, they return them with <code class="inline">content-type=image/x-icon</code> whereas SVG icons should be returned with <code class="inline">content-type=image/svg+xml</code>.
+This plug detects when the response body starts with &lt;svg and will override the content-type to correct it.</p>
   </section>
 </section>
 <section class="detail" id="init/1">
@@ -206,7 +210,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">init(_)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/favicon.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/favicon.ex#L35" class="view-source" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
