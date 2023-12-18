@@ -4,21 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.28.5">
+    <meta name="generator" content="ExDoc v0.30.3">
     <meta name="project" content="Plausible v0.0.1">
 
     <title>PlausibleWeb.Favicon — Plausible v0.0.1</title>
-    <link rel="stylesheet" href="dist/elixir-64c5e2b63575bddb1c5b.css" />
+    <link rel="stylesheet" href="dist/html-elixir-P5GXSCHE.css" />
 
-    <script src="dist/sidebar_items-e0ac7d3171.js"></script>
+
+    <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
+    <script src="dist/handlebars.templates-NBND3S2D.js"></script>
+    <script src="dist/sidebar_items-E147D7A7.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/app-b5f3440501744dc8be3d.js"></script>
+    <script async src="dist/html-CGDDOCMI.js"></script>
 
 
   </head>
-  <body data-type="modules">
+  <body data-type="modules" class="page-module">
     <script>
 
       try {
@@ -35,12 +38,11 @@
 
 <div class="main">
 
+<button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+  <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+</button>
 
 <section class="sidebar">
-  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
-    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
-  </button>
-
   <form class="sidebar-search" action="search.html">
     <button type="submit" class="search-button" aria-label="Submit Search">
       <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
@@ -50,7 +52,7 @@
     </button>
     <label class="search-label">
       <p class="sr-only">Search</p>
-      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
     </label>
   </form>
 
@@ -69,9 +71,9 @@
       <a href="readme.html" class="sidebar-projectName" translate="no">
 Plausible
       </a>
-      <strong class="sidebar-projectVersion" translate="no">
+      <div class="sidebar-projectVersion" translate="no">
         v0.0.1
-      </strong>
+      </div>
     </div>
     <ul class="sidebar-listNav">
       <li><a id="extras-list-link" href="#full-list">Pages</a></li>
@@ -85,7 +87,7 @@ Plausible
   </div>
 
   <div class="gradient"></div>
-  <ul id="full-list" class="sidebar-fullList"></ul>
+  <ul id="full-list"></ul>
 </section>
 
 <section class="content">
@@ -94,13 +96,13 @@ Plausible
     <div id="content" class="content-inner">
 
 <h1>
-<button class="settings display-settings">
+<button class="icon-action display-settings">
   <i class="ri-settings-3-line"></i>
   <span class="sr-only">Settings</span>
 </button>
 
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/favicon.ex#L1" title="View Source" class="view-source" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/favicon.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
@@ -131,36 +133,34 @@ managed by <a href="Mix.Tasks.GenerateReferrerFavicons.html#run/1"><code class="
     <h1 class="section-heading">
       <a class="hover-link" href="#summary">
         <i class="ri-link-m" aria-hidden="true"></i>
-        <span class="sr-only">Link to this section</span>
+        Summary
       </a>
-      Summary
     </h1>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
 
-  <div class="summary-functions summary">
-    <h2>
-      <a href="#functions">Functions</a>
-    </h2>
-
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#call/2" translate="no">call(conn, list)</a>
-
-        </div>
-
-          <div class="summary-synopsis"><p>Proxies HTTP request to DuckDuckGo favicon service. Swallows hop-by-hop HTTP headers that
-should not be forwarded as defined in RFC 2616 (<a href="https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1">https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1</a>)</p></div>
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#call/2" translate="no">call(conn, list)</a>
 
       </div>
 
-      <div class="summary-row">
-        <div class="summary-signature">
-          <a href="#init/1" translate="no">init(_)</a>
+        <div class="summary-synopsis"><p>Proxies HTTP request to DuckDuckGo favicon service. Swallows hop-by-hop HTTP
+headers that should not be forwarded as defined in <a href="https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1">RFC 2616</a></p></div>
 
-        </div>
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#init/1" translate="no">init(_)</a>
 
       </div>
 
-  </div>
+    </div>
+
+</div>
 
   </section>
 
@@ -169,9 +169,8 @@ should not be forwarded as defined in RFC 2616 (<a href="https://www.rfc-editor.
     <h1 class="section-heading">
       <a class="hover-link" href="#functions">
         <i class="ri-link-m" aria-hidden="true"></i>
-        <span class="sr-only">Link to this section</span>
-      </a>
 Functions
+      </a>
     </h1>
     <div class="functions-list">
 <section class="detail" id="call/2">
@@ -183,7 +182,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">call(conn, list)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/favicon.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/favicon.ex#L82" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -193,12 +192,31 @@ Functions
 
   <section class="docstring">
 
-<p>Proxies HTTP request to DuckDuckGo favicon service. Swallows hop-by-hop HTTP headers that
-should not be forwarded as defined in RFC 2616 (<a href="https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1">https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1</a>)</p><p>Cases where we show a placeholder icon instead:</p><ul><li>In case of network error to DuckDuckGo</li><li>In case of non-2xx status code from DuckDuckGo</li><li>In case of broken image response body from DuckDuckGo</li></ul><p>I'm not sure why DDG sometimes returns a broken PNG image in their response but we filter that out.
-When the icon request fails, we show a placeholder favicon instead. The placeholder is an emoji
-from <a href="https://favicon.io/emoji-favicons/">https://favicon.io/emoji-favicons/</a></p><p>DuckDuckGo favicon service has some issues with <a href="https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/">svg favicons</a>.
-For some reason, they return them with <code class="inline">content-type=image/x-icon</code> whereas SVG icons should be returned with <code class="inline">content-type=image/svg+xml</code>.
-This plug detects when the response body starts with &lt;svg and will override the content-type to correct it.</p>
+<p>Proxies HTTP request to DuckDuckGo favicon service. Swallows hop-by-hop HTTP
+headers that should not be forwarded as defined in <a href="https://www.rfc-editor.org/rfc/rfc2616#section-13.5.1">RFC 2616</a></p><h2 id="call/2-placeholder" class="section-heading">
+  <a href="#call/2-placeholder">
+    <i class="ri-link-m" aria-hidden="true"></i>
+    Placeholder
+  </a>
+</h2>
+<p>Cases where we show a placeholder icon instead:</p><ol><li>In case of network error to DuckDuckGo</li><li>In case of non-2xx status code from DuckDuckGo</li><li>In case of broken image response body from DuckDuckGo</li></ol><p>I'm not sure why DDG sometimes returns a broken PNG image in their response
+but we filter that out.  When the icon request fails, we show a placeholder
+favicon instead. The placeholder is an emoji from
+<a href="https://favicon.io/emoji-favicons/">https://favicon.io/emoji-favicons/</a></p><p>DuckDuckGo favicon service has some issues with <a href="https://css-tricks.com/svg-favicons-and-all-the-fun-things-we-can-do-with-them/">SVG favicons</a>.
+For some reason, they return them with <code class="inline">content-type=image/x-icon</code> whereas SVG
+icons should be returned with <code class="inline">content-type=image/svg+xml</code>. This Plug detects
+when the response body starts with <code class="inline">&lt;svg</code> and will override the <code class="inline">Content-Type</code>
+to correct it.</p><h2 id="call/2-preventing-xss-vulnerabilities" class="section-heading">
+  <a href="#call/2-preventing-xss-vulnerabilities">
+    <i class="ri-link-m" aria-hidden="true"></i>
+    Preventing XSS vulnerabilities
+  </a>
+</h2>
+<p>SVGs may contain <code class="inline">&lt;script&gt;</code> tags, and as these SVGs come from external
+sources, we need to prevent untrusted code from running on the browser.</p><ul><li><p>This Plug sets a strict <code class="inline">Content-Security-Policy</code> header telling the browser
+not to run scripts.</p></li><li><p>This Plug sets <code class="inline">Content-Disposition=attachment</code> to prevent the SVG from
+rendering when navigating to <code class="inline">/favicon/sources/:domain</code> directly.</p></li><li><p>Browsers do not execute scripts from <code class="inline">&lt;img&gt;</code> tags, therefore it is safe to
+use <code class="inline">&lt;img src=&quot;https://plausible.io/favicon/sources/dummy.site&quot;&gt;&lt;/img&gt;</code></p></li></ul>
   </section>
 </section>
 <section class="detail" id="init/1">
@@ -210,7 +228,7 @@ This plug detects when the response body starts with &lt;svg and will override t
     </a>
     <h1 class="signature" translate="no">init(_)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/favicon.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/favicon.ex#L35" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -228,10 +246,23 @@ This plug detects when the response body starts with &lt;svg and will override t
   </section>
 
       <footer class="footer">
-
         <p>
+
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+              Search HexDocs
+            </button>
+
+              <a href="Plausible.epub" title="ePub version">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.5) for the
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.30.3) for the
 
             <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 
