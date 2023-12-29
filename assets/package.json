@@ -21,7 +21,7 @@
     "alpinejs": "^3.13.1",
     "chart.js": "^3.3.2",
     "chartjs-plugin-datalabels": "^2.2.0",
-    "classnames": "^2.3.1",
+    "classnames": "^2.5.1",
     "datamaps": "^0.5.9",
     "dayjs": "^1.11.7",
     "debounce-promise": "^3.1.2",
