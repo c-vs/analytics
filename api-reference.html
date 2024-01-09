@@ -13,7 +13,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-NBND3S2D.js"></script>
-    <script src="dist/sidebar_items-E147D7A7.js"></script>
+    <script src="dist/sidebar_items-5B076C9F.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -831,11 +831,11 @@ hence an internal storage is used.</p></div>
 
   </div>
 
-    <div class="summary-synopsis"><p>Susbcribes to telemetry events emitted by <a href="Plausible.Ingestion.Event.html"><code class="inline">Plausible.Ingestion.Event</code></a>.
+    <div class="summary-synopsis"><p>Subscribes to telemetry events emitted by <a href="Plausible.Ingestion.Event.html"><code class="inline">Plausible.Ingestion.Event</code></a>.
 Every time a request derived event is either dispatched to clickhouse or dropped,
 a telemetry event is emitted respectively. That event is captured here,
 its metadata is extracted and sent for internal stats aggregation via
-<code class="inline">Counters.Buffer</code> interface. </p></div>
+<code class="inline">Counters.Buffer</code> interface.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1322,6 +1322,16 @@ transfers.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Stats.EmailReport.html" translate="no">Plausible.Stats.EmailReport</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>This module exposes a <a href="#get/2"><code class="inline">get/2</code></a> function that returns a map
+of stats needed for email reports. These stats include</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Stats.FilterParser.html" translate="no">Plausible.Stats.FilterParser</a>
 
   </div>
@@ -1472,6 +1482,16 @@ re-record the cassettes anyway).</p></div>
   </div>
 
     <div class="summary-synopsis"><p>User context</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Workers.AcceptTrafficUntil.html" translate="no">Plausible.Workers.AcceptTrafficUntil</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A worker meant to be run once a day that sends out e-mail notifications to site
+owners assuming</p></div>
 
 </div>
 <div class="summary-row">
@@ -2093,6 +2113,16 @@ and the number of steps they have.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="PlausibleWeb.Live.SentryContext.html" translate="no">PlausibleWeb.Live.SentryContext</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>This module tries to supply LiveViews with some common Sentry context
+(without it, there is practically none).</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="PlausibleWeb.Live.Sites.html" translate="no">PlausibleWeb.Live.Sites</a>
 
   </div>
@@ -2102,11 +2132,11 @@ and the number of steps they have.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="PlausibleWeb.MJML.WeeklyReport.html" translate="no">PlausibleWeb.MJML.WeeklyReport</a>
+    <a href="PlausibleWeb.MJML.StatsReport.html" translate="no">PlausibleWeb.MJML.StatsReport</a>
 
   </div>
 
-    <div class="summary-synopsis"><p>MJML rendered for the weekly report e-mail</p></div>
+    <div class="summary-synopsis"><p>MJML rendered for the weekly or monthly report e-mail</p></div>
 
 </div>
 <div class="summary-row">
@@ -2473,6 +2503,18 @@ tests that require setting up a Plugins API connection.</p></div>
 
     <div class="summary-synopsis"><p>Plug for Basic HTTP Authentication using
 Plugins API Tokens lookup.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Plugs.ErrorHandler.html" translate="no">PlausibleWeb.Plugs.ErrorHandler</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>  A thin macro wrapper around Plug.ErrorHandler that adds Sentry context
+  containing a readable support hash presented to the users.
+  To be used in the user-facing APIs, so that we don't leak internal
+  server errors.</p></div>
 
 </div>
 <div class="summary-row">

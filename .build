@@ -143,6 +143,7 @@ Plausible.Stats.Compare.html
 Plausible.Stats.Comparisons.html
 Plausible.Stats.CurrentVisitors.html
 Plausible.Stats.CustomProps.html
+Plausible.Stats.EmailReport.html
 Plausible.Stats.FilterParser.html
 Plausible.Stats.FilterSuggestions.html
 Plausible.Stats.Filters.html
@@ -163,6 +164,7 @@ Plausible.TestUtils.html
 Plausible.Themes.html
 Plausible.Timezones.html
 Plausible.Users.html
+Plausible.Workers.AcceptTrafficUntil.html
 Plausible.Workers.CheckUsage.html
 Plausible.Workers.CleanInvitations.html
 Plausible.Workers.ExpireDomainChangeTransitions.html
@@ -240,8 +242,9 @@ PlausibleWeb.Live.PropsSettings.List.html
 PlausibleWeb.Live.PropsSettings.html
 PlausibleWeb.Live.RegisterForm.html
 PlausibleWeb.Live.ResetPasswordForm.html
+PlausibleWeb.Live.SentryContext.html
 PlausibleWeb.Live.Sites.html
-PlausibleWeb.MJML.WeeklyReport.html
+PlausibleWeb.MJML.StatsReport.html
 PlausibleWeb.PageController.html
 PlausibleWeb.PageView.html
 PlausibleWeb.Plugins.API.Controllers.CustomProps.html
@@ -283,6 +286,7 @@ PlausibleWeb.Plugins.API.Views.SharedLink.html
 PlausibleWeb.Plugins.API.html
 PlausibleWeb.PluginsAPICase.html
 PlausibleWeb.Plugs.AuthorizePluginsAPI.html
+PlausibleWeb.Plugs.ErrorHandler.html
 PlausibleWeb.Plugs.MaybeDisableRegistration.html
 PlausibleWeb.Plugs.NoRobots.html
 PlausibleWeb.RefInspector.html
@@ -333,8 +337,8 @@ dist/merriweather-latin-ext-300-normal-K6L27CZ5.woff2
 dist/merriweather-vietnamese-300-italic-EHHNZPUO.woff2
 dist/merriweather-vietnamese-300-normal-U376L4Z4.woff2
 dist/remixicon-NKANDIL5.woff2
-dist/search_data-7268580C.js
-dist/sidebar_items-E147D7A7.js
+dist/search_data-D8E43185.js
+dist/sidebar_items-5B076C9F.js
 index.html
 readme.html
 search.html

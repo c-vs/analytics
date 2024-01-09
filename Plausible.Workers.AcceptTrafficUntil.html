@@ -7,13 +7,13 @@
     <meta name="generator" content="ExDoc v0.30.3">
     <meta name="project" content="Plausible v0.0.1">
 
-    <title>PlausibleWeb.MJML.WeeklyReport — Plausible v0.0.1</title>
+    <title>Plausible.Workers.AcceptTrafficUntil — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/html-elixir-P5GXSCHE.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-NBND3S2D.js"></script>
-    <script src="dist/sidebar_items-E147D7A7.js"></script>
+    <script src="dist/sidebar_items-5B076C9F.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -102,114 +102,24 @@ Plausible
 </button>
 
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/mjml/weekly_report.ex#L1" title="View Source" class="icon-action" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/workers/accept_traffic_until_notification.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">PlausibleWeb.MJML.WeeklyReport</span> 
+  <span translate="no">Plausible.Workers.AcceptTrafficUntil</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
 
   <section id="moduledoc">
-<p>MJML rendered for the weekly report e-mail</p>
+<p>A worker meant to be run once a day that sends out e-mail notifications to site
+owners assuming:</p><ul><li>their sites still receive traffic (i.e. have stats for yesterday)</li><li><code class="inline">site.accept_traffic_until</code> is approaching either tomorrow or exactly in 7 days</li></ul><p>Users having no sites or sites that receive no traffic, won't be notified.
+We make a tiny effort here to make sure we send the same notification at most once a day.</p>
   </section>
 
 
-  <section id="summary" class="details-list">
-    <h1 class="section-heading">
-      <a class="hover-link" href="#summary">
-        <i class="ri-link-m" aria-hidden="true"></i>
-        Summary
-      </a>
-    </h1>
-<div class="summary-functions summary">
-  <h2>
-    <a href="#functions">Functions</a>
-  </h2>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#debug_mjml_template/0" translate="no">debug_mjml_template()</a>
-
-      </div>
-
-        <div class="summary-synopsis"><p>Returns the raw MJML template. Useful for debugging rendering issues.</p></div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#render/1" translate="no">render(assigns)</a>
-
-      </div>
-
-        <div class="summary-synopsis"><p>Safely render the MJML template using Phoenix.HTML</p></div>
-
-    </div>
-
-</div>
-
-  </section>
-
-
-  <section id="functions" class="details-list">
-    <h1 class="section-heading">
-      <a class="hover-link" href="#functions">
-        <i class="ri-link-m" aria-hidden="true"></i>
-Functions
-      </a>
-    </h1>
-    <div class="functions-list">
-<section class="detail" id="debug_mjml_template/0">
-
-  <div class="detail-header">
-    <a href="#debug_mjml_template/0" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">debug_mjml_template()</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/mjml/weekly_report.ex#L6" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Returns the raw MJML template. Useful for debugging rendering issues.</p>
-  </section>
-</section>
-<section class="detail" id="render/1">
-
-  <div class="detail-header">
-    <a href="#render/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">render(assigns)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/mjml/weekly_report.ex#L6" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Safely render the MJML template using Phoenix.HTML</p>
-  </section>
-</section>
-
-    </div>
-  </section>
 
       <footer class="footer">
         <p>
